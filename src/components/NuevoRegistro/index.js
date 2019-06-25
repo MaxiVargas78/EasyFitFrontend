@@ -6,10 +6,10 @@ class NuevoRegistro extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const data = {
-      name: event.target.username.value,
-      email: event.target.email.value,
+      username: event.target.username.value,
+      Email: event.target.email.value,
       //phone_number: event.target.phone_number.value,
-      dob: event.target.dob.value,
+      password: event.target.password.value,
     };
     console.log(data);
     fetch("/signup", {
@@ -46,7 +46,7 @@ class NuevoRegistro extends Component {
                 <input required name="email" className="form-control" placeholder="Email" type="email" />
               </div>
               <div className="form-group col-md-6">
-                <input required id="dob" className="form-control" placeholder="Crea una contraseña" type="text" />
+                <input required id="password" className="form-control" placeholder="Crea una contraseña" type="text" />
               </div>
               <div className="form-group col-md-12 col-sm-12 col-xs-12">
                 <button className="btn-submit"  type="submit"href="http://localhost:3001/inicio-sesion" >Registrarse </button>
