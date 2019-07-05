@@ -7,7 +7,7 @@ import iniciarSesion from '../InicioSesion';
 import Novedades from '../Novedades';
 import Perfil from'../Perfil';
 import EditPerfil from '../EditPerfil';
-import Rutinas from '../Rutinas';
+import  FilterableContactTable from '../Rutinas';
 
 const Routes = props => (
   <Router {...props}>
@@ -17,10 +17,15 @@ const Routes = props => (
     <Route path="/novedades" component={Novedades}/>
     <Route path="/perfil" component={Perfil} />
     <Route path="/inicio-sesion-edit" component={EditPerfil} />
-    <Route path="/Rutinas" component={Rutinas} />
+    <Route path="/Rutinas" component={FilterableContactTable} />
     <Route path="*" component={PageNotFound} />
     
   </Router>
+
+  
 );
 
 export default Routes;
+
+
+

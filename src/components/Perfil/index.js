@@ -126,3 +126,5 @@ class Perfil extends Component {
 <div className="form-group col-md-6">
   <input required name="email" className="form-control" placeholder="" type="email" />
 </div>*/
+
+
