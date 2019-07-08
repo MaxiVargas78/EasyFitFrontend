@@ -8,7 +8,6 @@ class NuevoRegistro extends Component {
     const data = {
       username: event.target.username.value,
       Email: event.target.email.value,
-      //phone_number: event.target.phone_number.value,
       password: event.target.password.value,
     };
     console.log(data);
