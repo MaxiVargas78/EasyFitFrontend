@@ -8,7 +8,6 @@ class NuevoRegistro extends Component {
     const data = {
       username: event.target.username.value,
       Email: event.target.email.value,
-      //phone_number: event.target.phone_number.value,
       password: event.target.password.value,
     };
     console.log(data);
@@ -46,16 +45,13 @@ class NuevoRegistro extends Component {
                 <input required name="email" className="form-control" placeholder="Email" type="email" />
               </div>
               <div className="form-group col-md-6">
-                <input required id="password" className="form-control" placeholder="Crea una contraseña" type="password" />
+                <input required id="password" className="form-control" placeholder="Crea una contraseña" type="text" />
               </div>
               <div className="form-group col-md-12 col-sm-12 col-xs-12">
-                <button>
-                <a href="/inicio-sesion" className="btn-submit"  type="submit "type="button" href="./inicio-sesion" type="submit" >Registrarse </a>
-                </button>
+                <button className="btn-submit"  type="submit"href="http://localhost:3001/inicio-sesion" >Registrarse </button>
               </div>
             </form>
           </div>
-    
           <div className="col-md-2" />
         </div>
       </div>

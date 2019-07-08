@@ -6,14 +6,12 @@ class iniciarSesion extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const data = {
-      username: event.target.username.value,
-      email: event.target.email.value,
-      //phone_number: event.target.phone_number.value,
-      dob: event.target.dob.value,
+      username: event.target.username.value,     
+      password: event.target.password.value,
     };
     console.log(data);
-    fetch("/signup", {
-      method: 'POST',
+    fetch("/login", {
+      method: 'get',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     }).then((response) => {
