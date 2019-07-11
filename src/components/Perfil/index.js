@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import iniciarSesion from '../InicioSesion';
+
+
 
 class Perfil extends Component {
     handleDidMount = (event) => {
@@ -10,7 +13,7 @@ class Perfil extends Component {
         dob: event.target.dob.value,
       };
       console.log(data);
-      fetch("/signup", {
+      fetch("/profile", {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -27,7 +30,7 @@ class Perfil extends Component {
     }
   
     render() {
-      return (
+      return(
         <div className="section-content-block section-process">
           <div className="col-md-12 col-sm-12 text-center">
             <h2 className="section-heading"><span>PERFIL DE</span> USUARIO</h2>
@@ -61,7 +64,7 @@ class Perfil extends Component {
                 type="text"
                 name="text"
                 className="login-input"
-                placeholder=""/>
+                placeholder= "" />
             </div>
             <div className="input-group">
               <label htmlFor="text">Peso:</label>

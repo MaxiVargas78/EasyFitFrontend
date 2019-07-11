@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Switch, Route, Redirect} from 'react-router-dom';
+
 
 
 
@@ -7,11 +9,10 @@ class iniciarSesion extends Component {
     event.preventDefault();
     const data = {
       username: event.target.username.value,     
-      password: event.target.password.value,
+      password: event.target.password.value
     };
-    console.log(data);
     fetch("/login", {
-      method: 'get',
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     }).then((response) => {
@@ -21,10 +22,16 @@ class iniciarSesion extends Component {
       return response.json();
     }).then((respData) => {
       console.log(respData);
+      if(respData.log){
+         window.location.href = "perfil/"+ respData.id;
+      }else{
+        alert("Contraseña y/o usuario incorrecto");
+      }
     }).catch((err) => {
       console.log(err);
     });
   }
+
 
   render() {
     return (
@@ -38,15 +45,16 @@ class iniciarSesion extends Component {
           <div className="col-md-8 appointment-form-wrapper text-center clearfix">
             <form onSubmit={event => this.handleSubmit(event)} className="appoinment-form">
               <div className="form-group col-md-6">
-                <input required name="username" className="form-control" placeholder="Nombre de Usuario" type="text" />
+                <input required id="username" className="form-control" placeholder="username" type="text" />
               </div>
               <div className="form-group col-md-6">
-                <input required id="dob" className="form-control" placeholder="Contraseña" type="password" />
+                <input required id="password" className="form-control" placeholder="password" type="password" />
               </div>
               <div className="form-group col-md-12 col-sm-12 col-xs-12">
-              <button>
-                <a className="btn-submit"  type="submit "type="button" href="/perfil" type="submit" >Iniciar Sesión </a>
-                </button>
+                <button> 
+                  <a  className= "btn-submit" type="submit" type="button" href="./perfil" type="submit">Iniciar Sesion</a>
+
+                 </button>                 
               </div>
             </form>
           </div>

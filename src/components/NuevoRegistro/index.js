@@ -19,6 +19,7 @@ class NuevoRegistro extends Component {
       if (response.status >= 400) {
         throw new Error("Bad response from server");
       }
+      
       return response.json();
     }).then((respData) => {
       console.log(respData);
@@ -45,10 +46,10 @@ class NuevoRegistro extends Component {
                 <input required name="email" className="form-control" placeholder="Email" type="email" />
               </div>
               <div className="form-group col-md-6">
-                <input required id="password" className="form-control" placeholder="Crea una contraseña" type="text" />
+                <input required id="password" className="form-control" placeholder="Crea una contraseña" type="password" />
               </div>
               <div className="form-group col-md-12 col-sm-12 col-xs-12">
-                <button className="btn-submit"  type="submit"href="http://localhost:3001/inicio-sesion" >Registrarse </button>
+                <button className="btn-submit"  type="submit" href="http://localhost:3001/inicio-sesion" >Registrarse </button>
               </div>
             </form>
           </div>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import _ from 'lodash';
+//import _ from 'lodash';
 import '../Rutinas/App.css';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 //import ContactRow from './Clases/ContactRow';
 import ContactTable from './Clases/ContactTable';
 import SearchBar from './Clases/SearchBar';
