@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import iniciarSesion from '../InicioSesion';
 
 
 
@@ -13,7 +12,7 @@ class Perfil extends Component {
         dob: event.target.dob.value,
       };
       console.log(data);
-      fetch("/profile", {
+      fetch("/profile:id", {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)

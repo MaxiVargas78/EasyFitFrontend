@@ -19,10 +19,15 @@ class NuevoRegistro extends Component {
       if (response.status >= 400) {
         throw new Error("Bad response from server");
       }
-      
+
+      else{
+        window.location.href = "inicio-sesion";
+      }
+
       return response.json();
     }).then((respData) => {
       console.log(respData);
+      
     }).catch((err) => {
       console.log(err);
     });
@@ -49,7 +54,7 @@ class NuevoRegistro extends Component {
                 <input required id="password" className="form-control" placeholder="Crea una contraseña" type="password" />
               </div>
               <div className="form-group col-md-12 col-sm-12 col-xs-12">
-                <button className="btn-submit"  type="submit" href="http://localhost:3001/inicio-sesion" >Registrarse </button>
+                <button className="btn-submit"  type="submit" >Registrarse </button>
               </div>
             </form>
           </div>

@@ -51,10 +51,7 @@ class iniciarSesion extends Component {
                 <input required id="password" className="form-control" placeholder="password" type="password" />
               </div>
               <div className="form-group col-md-12 col-sm-12 col-xs-12">
-                <button> 
-                  <a  className= "btn-submit" type="submit" type="button" href="./perfil" type="submit">Iniciar Sesion</a>
-
-                 </button>                 
+                <button className="btn-submit"  type="submit" >Iniciar Sesión</button> 
               </div>
             </form>
           </div>
